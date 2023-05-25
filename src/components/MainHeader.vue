@@ -1,23 +1,30 @@
 <template>
     <nav>
         <router-link to="/">
-            <div class="catalog" :style="{backgroundImage: url(catalogUrl)}"></div>
+            <icon-base width="30px" height="30px" viewBox="0 0 256 256">
+                <catalog></catalog>
+            </icon-base>
         </router-link>
-        | 
-        <!-- СОСИ ДАЛБАЕБ\ а если серьёзно убери всю эту хуиту с свг и сделай нормальный компонент а внутрь свг -->
+        |
+        |
         <router-link to="/cart">
-            <div class="cart"></div>
+            <icon-base width="30px" height="30px" viewBox="0 0 24 24">
+                <cart></cart>
+            </icon-base>
         </router-link>
+        |
+        |
+        <router-link to="/icons">0-0</router-link>
     </nav>
 </template>
 
 <script>
 export default {
-  data() {
-    return {
-      catalogUrl: require("@/assets/icons/catalog.svg")
-    }
-  },
+    data() {
+        return {
+            catalogUrl: require("@/assets/icons/catalog.svg"),
+        };
+    },
 };
 </script>
 
@@ -25,18 +32,9 @@ export default {
 nav {
     display: flex;
     justify-content: flex-end;
-    background: #30815d;
+    background: #1c8556;
     height: 30px;
     width: 100%;
-    .catalog {
-        width: 25px;
-        height: 25px;
-    }
-    .cart {
-        width: 25px;
-        height: 25px;
-        background-image: require("@/assets/icons/shopping-cart.svg");
-    }
     a {
         font-weight: bold;
         color: #2c3e50;

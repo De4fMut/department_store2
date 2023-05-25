@@ -3,6 +3,7 @@
         <input type="image" :src="imageUrl" alt="">
         <h3>{{ el.title }}</h3>
         <h4>{{ el.regular_price.value + " " + el.regular_price.currency }}</h4>
+        <my-button></my-button>
     </div>
 </template>
 

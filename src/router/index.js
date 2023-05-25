@@ -15,6 +15,12 @@ const routes = [
     component: () =>
       import(/* webpackChunkName: "about" */ "@/views/ShoppingCart.vue"),
   },
+  {
+    path: "/icons",
+    name: "icons",
+    component: () =>
+    import("@/components/UI/AppIcon.vue")
+  }
 ];
 
 const router = createRouter({
